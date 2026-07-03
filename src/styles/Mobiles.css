@@ -1,0 +1,44 @@
+.mobiles-page{
+    padding:80px;
+}
+
+.mobiles-page h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.search-input{
+
+    width:350px;
+
+    padding:14px;
+
+    font-size:18px;
+
+    border:2px solid #2563eb;
+
+    border-radius:30px;
+
+    display:block;
+
+    margin:0 auto 50px;
+
+    outline:none;
+
+}
+
+.search-input:focus{
+
+    border-color:#1d4ed8;
+
+}
+
+.mobiles-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}

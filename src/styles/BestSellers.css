@@ -1,0 +1,18 @@
+.best{
+    padding: 80px 60px;
+    background:#EFF6FF;
+}
+
+.best h2{
+    text-align:center;
+    font-size:38px;
+    font-weight:700;
+    color:#0f172a;
+    margin-bottom:20px;
+}
+
+.best-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}

@@ -1,0 +1,26 @@
+.accessories{
+    padding:70px 80px;
+    background:#f8fafc;
+}
+
+.accessories h2{
+   text-align:center;
+    font-size:38px;
+    font-weight:700;
+    color:#0f172a;
+    margin-bottom:20px;
+}
+
+.accessories-subtitle{
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:40px;
+    color:#64748b;
+    font-size:18px;
+}
+
+.accessories-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
