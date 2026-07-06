@@ -1,8 +1,11 @@
 import "../styles/LatestLaunches.css";
 import latestLaunches from "../data/latestLaunches";
 import ProductCard from "../components/ProductCard";
+import { useContext } from "react";
+import { SearchContext } from "../context/SearchContext";
 
 function LatestLaunches() {
+  const { search } = useContext(SearchContext);
   return (
     <section className="latest">
 
@@ -10,10 +13,15 @@ function LatestLaunches() {
 
       <div className="latest-container">
 
-        {latestLaunches.map((phone) => (
+        {latestLaunches
+  .filter((phone) =>
+    phone.name.toLowerCase().includes(search.toLowerCase())
+  )
+  .map((phone) => (
 
           <ProductCard
             key={phone.id}
+            id={phone.id}
             image={phone.image}
             name={phone.name}
             price={phone.price}

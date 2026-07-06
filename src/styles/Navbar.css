@@ -115,3 +115,14 @@
     border-bottom:2px solid #facc15;
     padding-bottom:5px;
 }
+
+.cart-link{
+    text-decoration:none;
+    color:inherit;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.cart-link:hover{
+    color:#2563eb;
+}

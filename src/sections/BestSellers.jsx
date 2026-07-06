@@ -1,12 +1,17 @@
 import "../styles/BestSellers.css";
 import products from "../data/products";
 import ProductCard from "../components/ProductCard";
+import { useContext } from "react";
+import { SearchContext } from "../context/SearchContext";
 
 function BestSellers() {
+  const { search } = useContext(SearchContext);
 
   const bestSellers = products.filter(
-    (product) => product.bestseller
-  );
+  (product) =>
+    product.bestseller &&
+    product.name.toLowerCase().includes(search.toLowerCase())
+);
 
   return (
     <section className="best-sellers">
@@ -23,6 +28,7 @@ function BestSellers() {
 
           <ProductCard
             key={phone.id}
+            id={phone.id}
             image={phone.image}
             name={phone.name}
             price={phone.price}

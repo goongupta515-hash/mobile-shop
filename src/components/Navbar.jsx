@@ -1,9 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { SearchContext } from "../context/SearchContext";
+import { NavLink, Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 import logo from "../assets/logo/logo.png";
 import "../styles/Navbar.css";
 
 
 function Navbar() {
+  const { search, setSearch } = useContext(SearchContext);
+  const { cart } = useContext(CartContext);
+  
   return (
     <nav className="navbar">
       <div className="logo">
@@ -37,10 +43,12 @@ function Navbar() {
 
       <div className="search-box">
 
-  <input
-    type="text"
-    placeholder="Search mobiles..."
-  />
+ <input
+  type="text"
+  placeholder="Search mobiles..."
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+/>
 
   <button>
     🔍
@@ -49,7 +57,9 @@ function Navbar() {
 </div>
 
       <div className="nav-icons">
-        <span>🛒</span>
+<Link to="/cart" className="cart-link">
+  🛒 {cart.reduce((total, item) => total + item.quantity, 0)}
+</Link>
         <button>Login</button>
       </div>
     </nav>

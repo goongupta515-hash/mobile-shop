@@ -1,12 +1,17 @@
 import "../styles/FeaturedProducts.css";
 import products from "../data/products";
 import ProductCard from "./ProductCard";
+import { useContext } from "react";
+import { SearchContext } from "../context/SearchContext";
 
 function FeaturedProducts() {
+  const { search } = useContext(SearchContext);
 
   const featuredProducts = products.filter(
-    (product) => product.featured
-  );
+  (product) =>
+    product.featured &&
+    product.name.toLowerCase().includes(search.toLowerCase())
+);
 
   return (
     <section className="featured">
@@ -23,6 +28,7 @@ function FeaturedProducts() {
 
           <ProductCard
             key={phone.id}
+            id={phone.id}
             image={phone.image}
             name={phone.name}
             price={phone.price}

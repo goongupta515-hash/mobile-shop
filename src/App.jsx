@@ -7,6 +7,8 @@ import Mobiles from "./pages/Mobiles";
 import AccessoriesPage from "./pages/AccessoriesPage";
 import Offers from "./pages/Offers";
 import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -33,6 +35,16 @@ function App() {
           path="/contact"
           element={<Contact />}
         />
+
+        <Route
+        path="/cart"
+        element={<Cart />}
+       />
+
+       <Route
+  path="/checkout"
+  element={<Checkout />}
+/>
 
       </Routes>
 

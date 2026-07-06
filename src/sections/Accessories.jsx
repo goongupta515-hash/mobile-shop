@@ -1,8 +1,11 @@
 import "../styles/Accessories.css";
 import accessories from "../data/accessories";
 import ProductCard from "../components/ProductCard";
+import { useContext } from "react";
+import { SearchContext } from "../context/SearchContext";
 
 function Accessories() {
+  const { search } = useContext(SearchContext);
 
   return (
 
@@ -16,10 +19,14 @@ function Accessories() {
 
       <div className="accessories-container">
 
-        {accessories.map((item) => (
-
+        {accessories
+  .filter((item) =>
+    item.name.toLowerCase().includes(search.toLowerCase())
+  )
+  .map((item) => (
           <ProductCard
             key={item.id}
+            id={item.id}
             image={item.image}
             name={item.name}
             price={item.price}
