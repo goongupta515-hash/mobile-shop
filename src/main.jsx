@@ -6,14 +6,17 @@ import "./index.css";
 import App from "./App";
 import SearchProvider from "./context/SearchContext";
 import CartProvider from "./context/CartContext";
+import WishlistProvider from "./context/WishlistContext";
 
 createRoot(document.getElementById("root")).render(
 <StrictMode>
   <BrowserRouter>
     <SearchProvider>
-      <CartProvider>
-        <App />
-      </CartProvider>
+     <CartProvider>
+      <WishlistProvider>
+       <App />
+      </WishlistProvider>
+     </CartProvider>
     </SearchProvider>
   </BrowserRouter>
 </StrictMode>

@@ -127,3 +127,19 @@
 .checkout-btn:hover{
     background:#1d4ed8;
 }
+
+.empty-cart{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.empty-cart h2{
+    font-size:34px;
+    color:#1e293b;
+}
+
+.empty-cart p{
+    margin-top:15px;
+    color:#64748b;
+    font-size:18px;
+}

@@ -1,15 +1,31 @@
 import "../styles/ProductCard.css";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { WishlistContext } from "../context/WishlistContext";
 
 function ProductCard({ id, image, name, price, rating }) {
+  const { addToWishlist } = useContext(WishlistContext);
   const { addToCart } = useContext(CartContext);
   return (
     <div className="product-card">
 
       <span className="new-badge">NEW</span>
 
-      <span className="discount-badge">10% OFF</span>
+      {/* <span className="discount-badge">10% OFF</span> */}
+      <button
+  className="wishlist-btn"
+  onClick={() =>
+  addToWishlist({
+  id,
+  image,
+  name,
+  price,
+  rating,
+})
+  }
+>
+  ❤️
+</button>
 
       <img
         src={image}

@@ -6,7 +6,7 @@ import charger from "../assets/accessories/charger.png";
 const accessories = [
 
   {
-    id: 1,
+    id: 101,
     image: airpods,
     name: "Apple AirPods Pro",
     price: "₹22,999",
@@ -14,7 +14,7 @@ const accessories = [
   },
 
   {
-    id: 2,
+    id: 102,
     image: buds,
     name: "Samsung Galaxy Buds 3",
     price: "₹11,999",
@@ -22,7 +22,7 @@ const accessories = [
   },
 
   {
-    id: 3,
+    id: 103,
     image: powerbank,
     name: "Mi Power Bank 20000mAh",
     price: "₹2,499",
@@ -30,7 +30,7 @@ const accessories = [
   },
 
   {
-    id: 4,
+    id: 104,
     image: charger,
     name: "OnePlus 65W Fast Charger",
     price: "₹1,999",

@@ -5,7 +5,7 @@ import vivo from "../assets/mobiles/vivox200.png";
 
 const latestLaunches = [
   {
-    id: 1,
+    id: 2001,
     image: iphone,
     name: "iPhone 16 Pro",
     price: "₹1,19,999",
@@ -13,7 +13,7 @@ const latestLaunches = [
   },
 
   {
-    id: 2,
+    id: 2002,
     image: samsung,
     name: "Samsung Galaxy S25 Ultra",
     price: "₹99,999",
@@ -21,7 +21,7 @@ const latestLaunches = [
   },
 
   {
-    id: 3,
+    id: 2003,
     image: oneplus,
     name: "OnePlus 13",
     price: "₹64,999",
@@ -29,7 +29,7 @@ const latestLaunches = [
   },
 
   {
-    id: 4,
+    id: 2004,
     image: vivo,
     name: "Vivo X200 Pro",
     price: "₹94,999",

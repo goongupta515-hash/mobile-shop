@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { SearchContext } from "../context/SearchContext";
 import { NavLink, Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
+import { WishlistContext } from "../context/WishlistContext";
+
 import logo from "../assets/logo/logo.png";
 import "../styles/Navbar.css";
 
@@ -9,6 +11,7 @@ import "../styles/Navbar.css";
 function Navbar() {
   const { search, setSearch } = useContext(SearchContext);
   const { cart } = useContext(CartContext);
+  const { wishlist } = useContext(WishlistContext);
   
   return (
     <nav className="navbar">
@@ -57,11 +60,18 @@ function Navbar() {
 </div>
 
       <div className="nav-icons">
-<Link to="/cart" className="cart-link">
-  🛒 {cart.reduce((total, item) => total + item.quantity, 0)}
-</Link>
-        <button>Login</button>
-      </div>
+
+  <Link to="/wishlist" className="wishlist-link">
+    ❤️ {wishlist.length}
+  </Link>
+
+  <Link to="/cart" className="cart-link">
+    🛒 {cart.reduce((total, item) => total + item.quantity, 0)}
+  </Link>
+
+  <button>Login</button>
+
+</div>
     </nav>
   );
 }

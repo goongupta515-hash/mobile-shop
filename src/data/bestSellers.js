@@ -6,7 +6,7 @@ import realme from "../assets/mobiles/realmegt7.png";
 const bestSellers = [
 
   {
-    id:1,
+    id:1001,
     image:iphone,
     name:"iPhone 16 Pro",
     price:"₹1,19,999",
@@ -14,7 +14,7 @@ const bestSellers = [
   },
 
   {
-    id:2,
+    id:1002,
     image:nothing,
     name:"Nothing Phone 3",
     price:"₹49,999",
@@ -22,7 +22,7 @@ const bestSellers = [
   },
 
   {
-    id:3,
+    id:1003,
     image:oppo,
     name:"Oppo Find X8 Pro",
     price:"₹89,999",
@@ -30,7 +30,7 @@ const bestSellers = [
   },
 
   {
-    id:4,
+    id:1004,
     image:realme,
     name:"Realme GT 7",
     price:"₹39,999",

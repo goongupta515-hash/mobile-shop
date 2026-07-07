@@ -27,7 +27,15 @@ function Cart() {
       <h1>🛒 My Cart</h1>
 
       {cart.length === 0 ? (
-        <h2>Your cart is empty.</h2>
+        <div className="empty-cart">
+
+  <h2>🛒 Your Cart is Empty</h2>
+
+  <p>
+    Looks like you haven't added anything yet.
+  </p>
+
+</div>
       ) : (
         <>
           <div className="cart-items">
