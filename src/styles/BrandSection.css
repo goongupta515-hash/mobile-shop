@@ -46,3 +46,8 @@
 .brand-card:hover .brand-logo{
     transform:scale(1.1);
 }
+
+.brand-card{
+    text-decoration:none;
+    color:inherit;
+}

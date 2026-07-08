@@ -6,6 +6,7 @@ import vivo from "../assets/brands/vivo.png";
 import oppo from "../assets/brands/oppo.png";
 import nothing from "../assets/brands/nothing.png";
 import realme from "../assets/brands/realme.png";
+import { Link } from "react-router-dom";
 
 function BrandSection() {
   return (
@@ -15,40 +16,40 @@ function BrandSection() {
 
       <div className="brand-container">
 
-        <div className="brand-card">
+<Link to="/brand/Apple" className="brand-card">
     <img src={apple} alt="Apple" className="brand-logo" />
     <p>Apple</p>
-</div>
+</Link>
 
-        <div className="brand-card">
+       <Link to="/brand/Samsung" className="brand-card">
     <img src={samsung} alt="Samsung" className="brand-logo" />
     <p>Samsung</p>
-</div>
+</Link>
 
-        <div className="brand-card">
+        <Link to="/brand/OnePlus" className="brand-card">
     <img src={oneplus} alt="OnePlus" className="brand-logo" />
     <p>OnePlus</p>
-</div>
+</Link>
 
-        <div className="brand-card">
+<Link to="/brand/Vivo" className="brand-card">
     <img src={nothing} alt="Nothing" className="brand-logo" />
     <p>Nothing</p>
-</div>
+</Link>
 
-        <div className="brand-card">
+    <Link to="/brand/Realme" className="brand-card">
     <img src={realme} alt="Realme" className="brand-logo" />
     <p>Realme</p>
-</div>
+</Link>
 
-        <div className="brand-card">
+<Link to="/brand/Oppo" className="brand-card">
     <img src={vivo} alt="Vivo" className="brand-logo" />
     <p>Vivo</p>
-</div>
+</Link>
 
-        <div className="brand-card">
+        <Link to="/brand/Oppo" className="brand-card">
     <img src={oppo} alt="Oppo" className="brand-logo" />
     <p>Oppo</p>
-</div>
+</Link>
 
       </div>
 

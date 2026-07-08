@@ -7,6 +7,7 @@ import App from "./App";
 import SearchProvider from "./context/SearchContext";
 import CartProvider from "./context/CartContext";
 import WishlistProvider from "./context/WishlistContext";
+import "react-toastify/dist/ReactToastify.css";
 
 createRoot(document.getElementById("root")).render(
 <StrictMode>

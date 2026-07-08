@@ -11,6 +11,13 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import OrderSuccess from "./pages/OrderSuccess";
 import Wishlist from "./pages/Wishlist";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import ProductDetails from "./pages/ProductDetails";
+import BrandProducts from "./pages/BrandProducts";
+import Footer from "./sections/Footer";
+import { ToastContainer } from "react-toastify";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -48,6 +55,11 @@ function App() {
   element={<Checkout />}
 />
 
+<Route
+  path="/login"
+  element={<Login />}
+/>
+
        <Route
   path="/order-success"
   element={<OrderSuccess />}
@@ -58,7 +70,32 @@ function App() {
   element={<Wishlist />}
 />
 
+<Route
+  path="/register"
+  element={<Register />}
+/>
+<Route
+  path="/product/:id"
+  element={<ProductDetails />}
+/>
+
+<Route
+  path="/brand/:brand"
+  element={<BrandProducts />}
+/>
+
+<Route
+  path="*"
+  element={<NotFound />}
+/>
+
       </Routes>
+      <Footer />
+
+<ToastContainer
+  position="top-right"
+  autoClose={2000}
+/>
 
     </>
   );

@@ -11,6 +11,7 @@ function Cart() {
     removeFromCart,
   } = useContext(CartContext);
   const navigate = useNavigate();
+  const isLoggedIn = false;
 
   const totalItems = cart.reduce(
     (total, item) => total + item.quantity,
@@ -113,9 +114,15 @@ function Cart() {
                 Continue Shopping
               </button>
 
-              <button
+             <button
   className="checkout-btn"
-  onClick={() => navigate("/checkout")}
+  onClick={() => {
+    if (isLoggedIn) {
+      navigate("/checkout");
+    } else {
+      navigate("/login");
+    }
+  }}
 >
   Checkout
 </button>
